@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Reza Shirkavand"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Reza Shirkavand"
+description              : &description "Reza Shirkavand's Personal Website"
+url                      : https://rezashkv.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "reza-shkv97/rezashkv.github.io/"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,15 +80,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  name             : "Reza Shirkavand"
+  avatar           : "bio-photo.jpg"
+  bio              : "I am a second-year PhD student in the [Department of Computer Science](https://www.cs.umd.edu) at the [University of Maryland](https://umd.edu). Currently, I am under the guidance of [Dr. Heng Huang](https://www.cs.umd.edu/~heng/), focusing on research in Computer Vision and Machine Learning."
+  location         : "Washington, D.C."
+  pubmed           : 
+  googlescholar    : "https://scholar.google.com/citations?user=uS4nCAMAAAAJ&hl=en"
+  email            : "rezashkv@umd.edu"
+  researchgate     :  
   uri              :
   bitbucket        :
   codepen          :
@@ -102,14 +101,14 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "https://www.linkedin.com/in/reza-shirkavand-3b508612b/"
+  orcid            :
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "reza_shkv"
   vine             :
   weibo            :
   xing             :
