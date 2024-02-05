@@ -1,18 +1,9 @@
 # Authors
 
 Name Name:
-  name        : "Name Name"
-  uri         : "http://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
+  name        : "Reza Shirkavand"
+  uri         : "http://rezashkv.github.io"
+  email       : "rezashkv@umd.com"
+  bio         : "I am a second-year PhD student in the [Department of Computer Science](https://www.cs.umd.edu) at the [University of Maryland](https://umd.edu).
   avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+  twitter     : "reza_shkv"
