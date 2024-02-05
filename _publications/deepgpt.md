@@ -11,4 +11,3 @@ citation: [Bibtex]('https://scholar.googleusercontent.com/scholar.bib?q=info:IEh
 Prompt tuning for Graph Transformers and Message Passing Graph Neural Networks, improved efficiency and resource utilization of Graph Transformers.
 [View Code here](https://github.com/rezashkv/DeepGPT)
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
