@@ -1,0 +1,14 @@
+---
+title: "Deep Prompt Tuning for Graph Transformers"
+collection: publications
+permalink: /publication/deepgpt
+excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+date: 2023-09-18
+venue: 'ArXiv'
+paperurl: 'https://arxiv.org/abs/2309.10131'
+citation: [Bibtex]('https://scholar.googleusercontent.com/scholar.bib?q=info:IEhQosxgVZYJ:scholar.google.com/&output=citation&scisdr=ClEwYZ4DEI3rjWJld2Q:AFWwaeYAAAAAZcFjb2TxOycuzGChtDgr_6jJBXk&scisig=AFWwaeYAAAAAZcFjb9lJrPog3gEN3yiY0c5qD7U&scisf=4&ct=citation&cd=-1&hl=en') 
+---
+Prompt tuning for Graph Transformers and Message Passing Graph Neural Networks, improved efficiency and resource utilization of Graph Transformers.
+[View Code here](https://github.com/rezashkv/DeepGPT)
+
+Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
