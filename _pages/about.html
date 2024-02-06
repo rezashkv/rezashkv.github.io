@@ -21,8 +21,15 @@ redirect_from:
   {% for publication in site.publications %}
     <!-- You can customize this part to display the publication data as you want -->
     <div class="publication">
-      <h3>{{ publication.title }}</h3>
-      <p>{{ publication.abstract }}</p>
+      <p>{{ publication.title }}</p>
+      <p>{{ publication.authors }}</p>
+      {% if post.githuburl and post.paperurl %}
+          <p><a href=" {{ post.paperurl }} "><u>Paper</u></a> , <a href=" {{ post.githuburl }} "><u>Code</u></a></p>
+      {% elsif post.githuburl %}
+          <p><a href=" {{ post.githuburl }} "><u>Code</u></a></p>
+      {% elsif post.paperurl %}
+          <p><a href=" {{ post.paperurl }} "><u>Paper</u></a></p>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
