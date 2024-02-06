@@ -30,7 +30,7 @@ redirect_from:
   {% for post in site.publications %}
     <!-- You can customize this part to display the publication data as you want -->
     <div class="publication">
-      <h5>{{ post.title }}</h5>
+      <h3>{{ post.title }}</h3>
       <p><i>{{ post.authors }}</i></p>
       {% if post.githuburl and post.paperurl %}
           <p><a href=" {{ post.paperurl }} "><u>Paper</u></a> , <a href=" {{ post.githuburl }} "><u>Code</u></a></p>
