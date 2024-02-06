@@ -8,3 +8,20 @@ redirect_from:
   - /about.html
 ---
 
+<section id="about">
+  <p>
+    I am a PhD student in the <a href="https://www.cs.umd.edu">Department of Computer Science</a> at the <a href="https://gradschool.umd.edu">University of Maryland, College Park</a>. Currently, I am under advised by <a href="https://www.cs.umd.edu/~heng/">Dr. Heng Huang</a>.
+    My research interests are in the areas of machine learning and computer vision. I am particularly interested in developing efficient and robust deep learning models for visual recognition tasks.
+    Prior to joining UMD, I received my B.Sc. in Computer Engineering from <a href="http://www.en.sharif.edu">Sharif University of Technology</a>. I also worked in the industry as a Data Scientist for two years.
+  </p>
+</section>
+
+<div id="research-highlights">
+  {% for publication in site.publications %}
+    <!-- You can customize this part to display the publication data as you want -->
+    <div class="publication">
+      <h3>{{ publication.title }}</h3>
+      <p>{{ publication.abstract }}</p>
+    </div>
+  {% endfor %}
+</div>
