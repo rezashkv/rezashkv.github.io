@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* Ph.D. in Computer Science, University of Maryland, USA, 2023 - Present (Expected)
+* Ph.D. in Computer Science, University of Maryland, USA, 2023 - Present (Expected 2026)
 * M.Sc. in Electrical & Computer Engineering, University of Pittsburgh, USA, 2022 - 2023
 * B.Sc. in Computer Engineering, Sharif University of Technology, Iran, 2015 - 2020
 
@@ -22,7 +22,7 @@ Work Experience
   * Developed and deployed computer vision and natural language processing models for social media and web data analysis.
   * Utilized Python, TensorFlow, PyTorch, and other machine learning frameworks.
 
-Skills
+Research Interests
 ======
 * Computer Vision
 * Machine Learning
@@ -40,9 +40,6 @@ Talks
   {% include archive-single-talk-cv.html %}
 {% endfor %}</ul>
 
-Teaching
-======
-<ul>{% for post in site.teaching %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
+
+
 
