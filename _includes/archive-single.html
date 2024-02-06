@@ -52,7 +52,7 @@
 
 
     {% if post.githuburl and post.paperurl %}
-      <p><a href=" {{ post.paperurl }} "><u>Paper</u></a><a href=" {{ post.githuburl }} "><u>Code</u></a></p>
+      <p><a href=" {{ post.paperurl }} "><u>Paper</u></a> , <a href=" {{ post.githuburl }} "><u>Code</u></a></p>
     {% elsif post.githuburl %}
       <p><a href=" {{ post.githuburl }} "><u>Code</u></a></p>
     {% elsif post.paperurl %}
