@@ -27,7 +27,7 @@ redirect_from:
 
 <h2>Research Highlights</h2>
 <div id="research-highlights">
-  {% for post in site.publications %}
+  {% for post in site.publications | reverse%}
     <!-- You can customize this part to display the publication data as you want -->
     <div class="publication">
       <h3>{{ post.title }}</h3>
