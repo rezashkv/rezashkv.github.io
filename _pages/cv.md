@@ -9,5 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-<iframe src="/files/CV.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
+Download my CV [here](/files/CV.pdf).
 
+<iframe src="/files/CV.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
