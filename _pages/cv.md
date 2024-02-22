@@ -3,10 +3,11 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+redirect_from:
+  - /resume
 ---
 
 {% include base_path %}
-{% capture written_label %}'None'{% endcapture %}
 
 <iframe src="/files/cv.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
 
