@@ -36,14 +36,12 @@ redirect_from:
             <img src="{{ post.figure }}" alt="{{ post.title }}"
                  style="width:100%; aspect-ratio: 1/0.618; display: block; border-radius: 10px;">
         </div>
-        <div style="float:left; width:75%;">
-            <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
-            <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
-            <p>
-                <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
-                <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
-            </p>
-        </div>
+        <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
+        <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
+        <p>
+            <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
+            <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
+        </p>
     </div>
     {% endfor %}
 </div>
