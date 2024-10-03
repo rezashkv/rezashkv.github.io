@@ -27,11 +27,7 @@ redirect_from:
 
 <h2>Research Highlights</h2>
 <div id="research-highlights">
-  <!-- Loop through the posts in reverse chronological order -->
   {% for post in site.publications reversed %}
-    <!-- You can customize this part to display the publication data as you want, make it minimal and beautiful.
-    Paper Title, authors, and buttons for github url and arxiv url. -->
-  <div class="publication">
     <h3>{{ post.title }}</h3>
     <p>{{ post.authors }}</p>
 <!--    <p>{{ post.venue }}</p>-->
