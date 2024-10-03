@@ -19,15 +19,15 @@ redirect_from:
 
 <section id="about">
   <p>
-    I am a PhD student in the <a href="https://www.cs.umd.edu">Department of Computer Science</a> at the <a href="https://gradschool.umd.edu">University of Maryland, College Park</a>. Currently, I am advised by <a href="https://www.cs.umd.edu/~heng/">Dr. Heng Huang</a>.
-    My research interests are in the areas of machine learning and computer vision. I am particularly interested in developing efficient and robust deep learning models for visual recognition tasks.
-    Prior to joining UMD, I received my B.Sc. in Computer Engineering from <a href="http://www.en.sharif.edu">Sharif University of Technology</a>. I also worked in the industry as a Data Scientist for two years.
+    I am a 3rd year PhD student in the <a href="https://www.cs.umd.edu">Department of Computer Science</a> at the <a href="https://gradschool.umd.edu">University of Maryland, College Park</a>. Currently, I am advised by <a href="https://www.cs.umd.edu/~heng/">Dr. Heng Huang</a>.
+    My research interests are in the areas of Deep Learning, and Generative Models. I am particularly interested in developing efficient deep learning models that can be deployed on resource constrained systems and edge devices.
+    Prior to joining UMD, I received my B.Sc. in Computer Engineering from <a href="http://www.en.sharif.edu">Sharif University of Technology</a>.
   </p>
 </section>
 
 <h2>Research Highlights</h2>
 <div id="research-highlights">
-  {% for post in site.publications | reverse%}
+  {% for post in site.publications%}
     <!-- You can customize this part to display the publication data as you want -->
     <div class="publication">
       <h3>{{ post.title }}</h3>
