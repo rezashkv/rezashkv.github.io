@@ -95,12 +95,13 @@
     }
   }
 
-  /* dark theme transparent bg with non-underlined text and border*/
+  /* dark theme transparent bg with non-underlined text and border. total */
   &--dark {
 
     background-color: transparent;
     color: $text-color !important;
     border: 1px solid $text-color !important;
+
 
     &:hover {
       background-color: $text-color;
