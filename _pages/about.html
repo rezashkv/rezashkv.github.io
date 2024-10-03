@@ -28,10 +28,10 @@ redirect_from:
 <h2>Research Highlights</h2>
 <div id="research-highlights">
   {% for post in site.publications reversed %}
+    <div style="float:left; width:25%; margin-right: 10px; overflow: hidden; border-radius: 10px; background-color: #f0f0f0;">
+        <img src="{{ post.figure }}" alt="{{ post.title }}" style="width:100%; display: block; border-radius: 10px;">
+    </div>
     <div class="publication">
-      <div style="float:left; width:25%; margin-right: 10px; overflow: hidden; border-radius: 10px; background-color: #f0f0f0;">
-        <img src="{{ post.figure }}" alt="{{ post.title }}" style="width:98%; height:98%; display: block; border-radius: 10px;">
-      </div>
       <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
       <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
       <p>
