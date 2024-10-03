@@ -13,13 +13,8 @@ redirect_from:
         border-bottom: 1px dashed lightgrey;
         margin-bottom: 10px; /* This will add a black border at the bottom of each div */
     }
-
-    .clearfix::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
 </style>
+
 
 
 <section id="about">
@@ -37,7 +32,7 @@ redirect_from:
 <h2>Research Highlights</h2>
 <div id="research-highlights">
     {% for post in site.publications reversed %}
-    <div class="publication clearfix">
+    <div class="publication">
         <div style="float:left; width:20%; margin-right: 10px; overflow: hidden; border-radius: 10px; background-color: #f0f0f0;">
             <img src="{{ post.figure }}" alt="{{ post.title }}"
                  style="width:100%; aspect-ratio: 1/0.618; display: block; border-radius: 10px;">

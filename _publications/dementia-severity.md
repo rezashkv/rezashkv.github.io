@@ -7,7 +7,7 @@ date: 2021-03-18
 venue: 'ArXiv'
 paperurl: 'https://arxiv.org/pdf/2103.10056'
 githuburl: 'https://github.com/dementia-classification/Dementia-Severity-Classification'
-authors: 'Reza Shirkavand, Sana Ayromlou, Soroush Farghadani, Maedeh-sadat Tahaei, Fattane Pourakpour, Bahareh Siahlou, Zeynab Khodakarami, Mohammad H Rohban, Mansoor Fatehi, Hamid R Rabiee'
+authors: 'Reza Shirkavand, Sana Ayromlou, Soroush Farghadani, Maedeh-sadat Tahaei, Mohammad H Rohban, Mansoor Fatehi, Hamid R Rabiee'
 figure: 'images/dementia.pdf'
 #citation: "[Bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:IEhQosxgVZYJ:scholar.google.com/&output=citation&scisdr=ClEwYZ4DEI3rjWJld2Q:AFWwaeYAAAAAZcFjb2TxOycuzGChtDgr_6jJBXk&scisig=AFWwaeYAAAAAZcFjb9lJrPog3gEN3yiY0c5qD7U&scisf=4&ct=citation&cd=-1&hl=en)" 
 ---
