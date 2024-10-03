@@ -28,18 +28,18 @@ redirect_from:
 <h2>Research Highlights</h2>
 <div id="research-highlights">
   {% for post in site.publications%}
-    <!-- You can customize this part to display the publication data as you want -->
-    <div class="publication">
-      <h3>{{ post.title }}</h3>
-      <p><i>{{ post.authors }}</i></p>
-      {% if post.githuburl and post.paperurl %}
-          <p><a href=" {{ post.paperurl }} "><u>Paper</u></a> , <a href=" {{ post.githuburl }} "><u>Code</u></a></p>
-      {% elsif post.githuburl %}
-          <p><a href=" {{ post.githuburl }} "><u>Code</u></a></p>
-      {% elsif post.paperurl %}
-          <p><a href=" {{ post.paperurl }} "><u>Paper</u></a></p>
-      {% endif %}
-    </div>
-
+    <!-- You can customize this part to display the publication data as you want, make it minimal and beautiful.
+    Paper Title, authors, and buttons for github url and arxiv url. -->
+  <div class="publication">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.authors }}</p>
+<!--    <p>{{ post.venue }}</p>-->
+<!--    <p>{{ post.year }}</p>-->
+<!--    <p>{{ post.abstract }}</p>-->
+    <p>
+      <a href="{{ post.github }}" class="btn btn--info">Github</a>
+      <a href="{{ post.arxiv }}" class="btn btn--info">Arxiv</a>
+    </p>
   {% endfor %}
+  </div>
 </div>
