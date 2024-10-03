@@ -95,6 +95,19 @@
     }
   }
 
+  /* dark theme */
+  &--dark {
+    background-color: $dark-mode-icon-color;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: mix(white, $dark-mode-icon-color, 20%);
+    }
+  }
+
   /* danger */
 
   &--danger {
