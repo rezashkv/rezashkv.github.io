@@ -29,11 +29,12 @@ redirect_from:
 <div id="research-highlights">
   {% for post in site.publications reversed %}
     <div class="publication">
+      # image and div side by side image size is half of the div size
+        <div style="float:left; width:50%;">
+            <img src="{{ post.figure }}" alt="{{ post.title }}" style="width:100%;">
+        </div>
     <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
     <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
-<!--    <p>{{ post.venue }}</p>-->
-<!--    <p>{{ post.year }}</p>-->
-<!--    <p>{{ post.abstract }}</p>-->
     <p>
       <a href="{{ post.githuburl }}" class="btn btn--dark">Code</a>
       <a href="{{ post.paperurl }}" class="btn btn--dark">PDF</a>
