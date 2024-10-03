@@ -97,8 +97,7 @@
       }
 
       &.disabled {
-        //color: mix(#fff, $gray, 75%);
-        color: $text-color;
+        color: mix(#fff, $gray, 75%);
         pointer-events: none;
         cursor: not-allowed;
       }
