@@ -28,6 +28,7 @@ redirect_from:
 <h2>Research Highlights</h2>
 <div id="research-highlights">
   {% for post in site.publications reversed %}
+    <div class="publication">
     <h3>{{ post.title }}</h3>
     <p>{{ post.authors }}</p>
 <!--    <p>{{ post.venue }}</p>-->
@@ -37,6 +38,6 @@ redirect_from:
       <a href="{{ post.github }}" class="btn btn--info">Code</a>
       <a href="{{ post.arxiv }}" class="btn btn--info">PDF</a>
     </p>
-  </div>
+    </div>
   {% endfor %}
 </div>
