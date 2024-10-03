@@ -95,16 +95,16 @@
     }
   }
 
-  /* dark theme */
+  /* dark theme transparent bg with non-underlined text and border*/
   &--dark {
-    background-color: $dark-mode-icon-color;
-    color: white !important;
-    border: 0 !important;
-    border-radius: 0;
-    cursor: pointer;
+
+    background-color: transparent;
+    color: $text-color !important;
+    border: 1px solid $text-color !important;
 
     &:hover {
-      background-color: mix(white, $dark-mode-icon-color, 20%);
+      background-color: $text-color;
+      color: $background-color !important;
     }
   }
 
