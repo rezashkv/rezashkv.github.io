@@ -13,7 +13,7 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item">
+  <article class="archive__item" style="border-bottom: 1px dashed lightgrey; margin-bottom: 5px;">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
