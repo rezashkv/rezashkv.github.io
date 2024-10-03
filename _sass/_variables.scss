@@ -54,10 +54,12 @@ $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 $charcoal                   : #2C2C2C;
 
-$body-color                 : #fff;
+//$body-color                 : #fff;
+$body-color                 : #2C2C2C;
 //$background-color           : #fff;
 $background-color           : #2C2C2C;
-$code-background-color      : #fafafa;
+//$code-background-color      : #fafafa;
+$code-background-color      : #2C2C2C;
 $code-background-color-dark : $light-gray;
 //$text-color                 : $dark-gray;
 $text-color                 : #fff;
