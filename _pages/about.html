@@ -31,17 +31,19 @@ redirect_from:
 <h2>Research Highlights</h2>
 <div id="research-highlights">
     {% for post in site.publications reversed %}
-    <div class="publication">
-        <div style="float:left; width:20%; margin-right: 10px; overflow: hidden; border-radius: 10px; background-color: #f0f0f0;">
+    <div class="publication" style="display: flex; align-items: flex-start;">
+        <div style="width: 20%; margin-right: 10px; overflow: hidden; border-radius: 10px; background-color: #f0f0f0;">
             <img src="{{ post.figure }}" alt="{{ post.title }}"
                  style="width:100%; aspect-ratio: 1/0.618; display: block; border-radius: 10px;">
         </div>
-        <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
-        <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
-        <p>
-            <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
-            <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
-        </p>
+        <div style="flex-grow: 1;">
+            <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
+            <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
+            <p>
+                <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
+                <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
+            </p>
+        </div>
     </div>
     {% endfor %}
 </div>
