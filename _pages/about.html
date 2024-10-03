@@ -4,40 +4,46 @@ title: "About me"
 excerpt: "About me"
 author_profile: true
 redirect_from:
-  - /about/
-  - /about.html
+- /about/
+- /about.html
 ---
 
 <style>
-.publication {
-  border-bottom: 1px dashed lightgrey;
-  margin-bottom: 10px;/* This will add a black border at the bottom of each div */
-}
+    .publication {
+        border-bottom: 1px dashed lightgrey;
+        margin-bottom: 10px; /* This will add a black border at the bottom of each div */
+    }
 </style>
 
 
-
 <section id="about">
-  <p>
-    I am a 3rd year PhD student in the <a href="https://www.cs.umd.edu">Department of Computer Science</a> at the <a href="https://gradschool.umd.edu">University of Maryland, College Park</a>. Currently, I am advised by <a href="https://www.cs.umd.edu/~heng/">Dr. Heng Huang</a>.
-    My research interests are in the areas of Deep Learning, and Generative Models. I am particularly interested in developing efficient deep learning models that can be deployed on resource constrained systems and edge devices.
-    Prior to joining UMD, I received my B.Sc. in Computer Engineering from <a href="http://www.en.sharif.edu">Sharif University of Technology</a>.
-  </p>
+    <p>
+        I am a 3rd year PhD student in the <a href="https://www.cs.umd.edu">Department of Computer Science</a> at the <a
+            href="https://gradschool.umd.edu">University of Maryland, College Park</a>. Currently, I am advised by <a
+            href="https://www.cs.umd.edu/~heng/">Dr. Heng Huang</a>.
+        My research interests are in the areas of Deep Learning, and Generative Models. I am particularly interested in
+        developing efficient deep learning models that can be deployed on resource constrained systems and edge devices.
+        Prior to joining UMD, I received my B.Sc. in Computer Engineering from <a href="http://www.en.sharif.edu">Sharif
+        University of Technology</a>.
+    </p>
 </section>
 
 <h2>Research Highlights</h2>
 <div id="research-highlights">
-  {% for post in site.publications reversed %}
-  <div class="publication">
-    <div style="float:left; width:20%; margin-right: 10px; overflow: hidden; border-radius: 10px; background-color: #f0f0f0;">
-        <img src="{{ post.figure }}" alt="{{ post.title }}" style="width:100%; aspect-ratio: 1/0.618; display: block; border-radius: 10px;">
+    {% for post in site.publications reversed %}
+    <div class="publication">
+        <div style="float:left; width:20%; margin-right: 10px; overflow: hidden; border-radius: 10px; background-color: #f0f0f0;">
+            <img src="{{ post.figure }}" alt="{{ post.title }}"
+                 style="width:100%; aspect-ratio: 1/0.618; display: block; border-radius: 10px;">
+        </div>
+        <div>
+            <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
+            <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
+            <p>
+                <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
+                <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
+            </p>
+        </div>
     </div>
-    <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
-    <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
-    <p>
-      <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
-      <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
-    </p>
-  </div>
-  {% endfor %}
+    {% endfor %}
 </div>
