@@ -131,11 +131,10 @@
 
   /* social buttons */
 
-  $social:
-  (facebook, $facebook-color),
-  (twitter, $twitter-color),
-  (google-plus, $google-plus-color),
-  (linkedin, $linkedin-color);
+  $social: (facebook, $facebook-color),
+          (twitter, $twitter-color),
+          (google-plus, $google-plus-color),
+          (linkedin, $linkedin-color);
 
   @each $socialnetwork, $color in $social {
     &--#{$socialnetwork} {
@@ -169,5 +168,6 @@
     font-size: $type-size-9;
     margin-bottom: 0;
     margin-top: 0;
+    margin-right: 5px; /* Add small space between buttons */
   }
 }

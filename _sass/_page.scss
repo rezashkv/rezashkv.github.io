@@ -399,3 +399,42 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+
+.publication {
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align the items at the top */
+    border-bottom: 1px dashed lightgrey;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.publication img {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1/0.618;
+    display: block;
+}
+
+.publication-content {
+    width: 70%; /* Give this part the remaining space */
+}
+
+.publication-image {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.publication h3 {
+    margin-top: 0;
+}
+
+.publication p.authors {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.publication .buttons {
+    margin-top: 10px; /* Ensure buttons are below authors */
+}
