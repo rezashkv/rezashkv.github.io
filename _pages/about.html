@@ -29,7 +29,9 @@ redirect_from:
         </div>
         <div class="publication-content">
             <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
-            <p class="authors">{{ post.authors }}</p>
+            <p class="authors">
+                {{ post.authors | replace: 'Reza Shirkavand', '<strong>Reza Shirkavand</strong>' }}
+            </p>
             <div class="buttons">
                 <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
                 <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
