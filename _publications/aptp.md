@@ -7,7 +7,7 @@ date: 2024-06-17
 venue: 'ArXiv'
 paperurl: 'https://arxiv.org/abs/2406.12042'
 githuburl: 'https://github.com/rezashkv/diffusion_pruning'
-authors: 'Reza Shirkavand, Alireza Ganjdanesh, Shangqian Gao, Heng Huang'
+authors: 'Reza Shirkavand*, Alireza Ganjdanesh*, Shangqian Gao, Heng Huang'
 figure: '/images/aptp.pdf'
 #citation: "[Bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:ZkCwRc5-7bgJ:scholar.google.com/&output=citation&scisdr=ClExa795EPesk0nPEiI:AFWwaeYAAAAAZv7JCiJJwHMa3sda3gsFkNG24VI&scisig=AFWwaeYAAAAAZv7JCuMjfKl65zI00CI_v1C_Qlk&scisf=4&ct=citation&cd=-1&hl=en)" 
 ---
