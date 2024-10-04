@@ -1,32 +1,58 @@
+---
+permalink: /
+title: "About me"
+excerpt: "About me"
+author_profile: true
+redirect_from:
+- /about/
+- /about.html
+---
+
 <style>
     .publication {
+        display: flex; /* Use flexbox for alignment */
+        align-items: flex-start; /* Align the items at the top */
         border-bottom: 1px dashed lightgrey;
-        margin-bottom: 15px; /* Increased for better spacing */
-        display: flex; /* Use Flexbox for layout */
-        align-items: flex-start; /* Align items at the start */
-        padding: 10px 0; /* Add some padding */
+        margin-bottom: 20px;
+        padding-bottom: 20px;
     }
 
     .publication img {
-        width: 100%; /* Full width */
-        max-width: 100px; /* Set a max width for the image */
-        aspect-ratio: 1 / 0.618; /* Maintain aspect ratio */
-        border-radius: 10px; /* Rounded corners */
-        margin-right: 15px; /* Space between image and text */
+        border-radius: 10px;
+        width: 100%;
+        aspect-ratio: 1/0.618;
+        display: block;
     }
 
     .publication-content {
-        flex: 1; /* Take the remaining space */
+        width: 70%; /* Give this part the remaining space */
     }
 
-    .btn-group {
-        margin-top: 10px; /* Space above buttons */
+    .publication-image {
+        width: 30%;
+        margin-right: 20px;
     }
 
-    .btn {
-        margin-right: 5px; /* Space between buttons */
+    .publication h3 {
+        margin-top: 0;
+    }
+
+    .publication p.authors {
+        font-size: 0.8em;
+        font-style: italic;
+        margin: 5px 0;
+    }
+
+    .publication .buttons {
+        margin-top: 10px; /* Ensure buttons are below authors */
+    }
+
+    .btn--tiny {
+        margin-right: 5px; /* Add small space between buttons */
     }
 </style>
+
+
 
 <section id="about">
     <p>
@@ -44,11 +70,13 @@
 <div id="research-highlights">
     {% for post in site.publications reversed %}
     <div class="publication">
-        <img src="{{ post.figure }}" alt="{{ post.title }}">
+        <div class="publication-image">
+            <img src="{{ post.figure }}" alt="{{ post.title }}">
+        </div>
         <div class="publication-content">
             <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
-            <p style="font-size: 0.8em; font-style: italic;">{{ post.authors }}</p>
-            <div class="btn-group">
+            <p class="authors">{{ post.authors }}</p>
+            <div class="buttons">
                 <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
                 <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
             </div>
