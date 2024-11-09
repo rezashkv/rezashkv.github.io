@@ -25,7 +25,9 @@ redirect_from:
     {% for post in site.publications reversed %}
     <div class="publication">
         <div class="publication-image">
-            <img src="{{ post.figure }}" alt="{{ post.title }}">
+            <a href="{{ post.paperurl }}">
+                <img src="{{ post.figure }}" alt="{{ post.title }}">
+            </a>
         </div>
         <div class="publication-content">
             <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
