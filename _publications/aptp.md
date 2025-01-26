@@ -4,7 +4,8 @@ collection: publications
 permalink: /publications/aptp/
 excerpt: 'Dynamic Prompt-based Pruning of Text-to-Image Diffusion Models'
 date: 2024-06-17
-venue: 'ArXiv'
+venue: 'ICLR 2025'
+venueurl: 'https://openreview.net/forum?id=3BhZCfJ73Y'
 paperurl: 'https://arxiv.org/abs/2406.12042'
 githuburl: 'https://github.com/rezashkv/diffusion_pruning'
 authors: 'Reza Shirkavand*, Alireza Ganjdanesh*, Shangqian Gao, Heng Huang'
