@@ -4,7 +4,8 @@ collection: publications
 permalink: /publications/ft-unlearn/
 excerpt: 'How to train a small diffusion model while suppressing unwanted concepts'
 date: 2024-12-19
-venue: 'ArXiv'
+venue: 'CVPR 2025'
+venueurl: 'https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers'
 paperurl: 'https://arxiv.org/abs/2412.15341'
 githuburl: 'https://github.com/rezashkv/diffusion_pruning'
 authors: 'Reza Shirkavand, Peiran Yu, Shangqian Gao, Gowthami Somepalli, Tom Goldstein, Heng Huang'
