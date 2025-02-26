@@ -52,8 +52,9 @@ redirect_from:
                 <a href="{{ post.githuburl }}" class="btn btn--dark btn--tiny">Code</a>
                 <a href="{{ post.paperurl }}" class="btn btn--dark btn--tiny">PDF</a>
                 {% if post.venueurl %}
-                <a href="{{ post.venueurl }}" class="btn btn--dark btn--tiny">{{ post.venue }}</a>
-                {% endif %}
+                // make the venue button red
+                <a href="{{ post.venueurl }}" class="btn btn--dark btn--tiny" style="background-color: #ff0000;">Venue</a>
+                {% else %}
             </div>
         </div>
     </div>
