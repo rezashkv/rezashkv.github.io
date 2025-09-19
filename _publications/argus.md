@@ -5,7 +5,7 @@ permalink: /publications/argus/
 excerpt: 'An evaluation framework and benchmark for free-form video-LLMs hallucination and omission.'
 date: 2025-06-10
 venue: 'ICCV 2025'
-venueurl: 'https://iccv.thecvf.com/'
+venueurl: 'https://iccv.thecvf.com/Conferences/2025/AcceptedPapers'
 paperurl: 'https://arxiv.org/abs/2506.07371'
 githuburl: 'https://huggingface.co/datasets/tomg-group-umd/argus'
 authors: 'Ruchit Rawal, Reza Shirkavand, Heng Huang, Gowthami Somepalli, Tom Goldstein'

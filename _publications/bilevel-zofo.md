@@ -4,7 +4,8 @@ collection: publications
 permalink: /publications/bilevel-zofo/
 excerpt: 'We propose Bilevel ZOFO, a novel bilevel optimization framework that bridges parameter-efficient and zeroth-order optimization techniques for efficient large language model (LLM) fine-tuning and meta-training.'
 date: 2025-02-05
-venue: 'ArXiv'
+venue: 'NeurIPS 2025'
+venueurl: 'https://neurips.cc'
 paperurl: 'https://www.arxiv.org/abs/2502.03604'
 githuburl: 'https://github.com/Peiran225/bilevel_ZOFO'
 authors: 'Reza Shirkavand, Qi He, Peiran Yu, Heng Huang'
