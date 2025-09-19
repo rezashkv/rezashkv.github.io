@@ -3,7 +3,7 @@ title: "Bilevel ZOFO: Bridging Parameter-Efficient and Zeroth-Order Techniques f
 collection: publications
 permalink: /publications/bilevel-zofo/
 excerpt: 'We propose Bilevel ZOFO, a novel bilevel optimization framework that bridges parameter-efficient and zeroth-order optimization techniques for efficient large language model (LLM) fine-tuning and meta-training.'
-date: 2025-02-05
+date: 2025-09-15
 venue: 'NeurIPS 2025'
 venueurl: 'https://neurips.cc'
 paperurl: 'https://www.arxiv.org/abs/2502.03604'
