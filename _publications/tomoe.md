@@ -4,7 +4,8 @@ collection: publications
 permalink: /publications/tomoe/
 excerpt: 'We propose ToMoE, a novel method for converting dense large language models to mixture-of-experts through dynamic structural pruning.'
 date: 2025-01-25
-venue: 'ArXiv'
+venue: 'TMLR 2025'
+venueurl: 'https://openreview.net/forum?id=RFHq46pjb6'
 paperurl: 'https://arxiv.org/abs/2501.15316'
 githuburl: 'https://github.com/gaosh/ToMoE'
 authors: 'Shangqian Gao, Ting Hua, Reza Shirkavand, Chi-Heng Lin, Zhen Tang, Zhengao Li, Longge Yuan, Fangyi Li, Zeyu Zhang, Alireza Ganjdanesh, Lou Qian, Xu Jie, Yen-Chang Hsu'
