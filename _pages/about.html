@@ -13,8 +13,7 @@ redirect_from:
         I am a PhD candidate in the <a href="https://www.cs.umd.edu">Department of Computer Science</a> at the <a
             href="https://gradschool.umd.edu">University of Maryland, College Park</a>. Currently, I am advised by <a
             href="https://www.cs.umd.edu/~heng/">Dr. Heng Huang</a>.
-        My research interests are in the areas of Efficient Deep Learning, and Generative Models. I am particularly interested in
-        Mixture of Experts.
+        My research interests are in the areas of Efficient Deep Learning, and Generative Models.
         Prior to joining UMD, I received my B.Sc. in Computer Engineering from <a href="http://www.en.sharif.edu">Sharif
         University of Technology</a>.
     </p>
@@ -23,6 +22,10 @@ redirect_from:
 <section id="news">
     <h2>News</h2>
     <ul>
+        <li>
+            [Jan 2026] <a href="https://arxiv.org/abs/2501.15316">IDIOMoE</a> is accepted at <a
+                href="https://iclr.cc">ICLR 2026</a>.
+        </li>
         <li>
             [Dec 2025] <a href="https://arxiv.org/abs/2501.15316">ToMoE</a> is accepted at <a
                 href="https://jmlr.org/tmlr/">TMLR 2025</a>.
@@ -54,6 +57,7 @@ redirect_from:
 <h2>Research Highlights</h2>
 <div id="research-highlights">
     {% for post in site.publications reversed %}
+    {% if post.highlight == "true"}
     <div class="publication">
         <div class="publication-image">
             <a href="{{ post.paperurl }}">
@@ -74,5 +78,6 @@ redirect_from:
             </div>
         </div>
     </div>
+    {% endif %}
     {% endfor %}
 </div>

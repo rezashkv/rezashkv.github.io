@@ -10,6 +10,7 @@ paperurl: 'https://arxiv.org/pdf/2508.12491'
 githuburl: 'https://github.com/rezashkv/cscr'
 authors: 'Reza Shirkavand, Shangqian Gao, Peiran Yu, Heng Huang'
 figure: '/images/cscr.png' 
+highlight: true
 ---
 We study cost-aware routing for large language models across diverse and dynamic pools of models. Existing approaches often overlook prompt-specific context, rely  on expensive model profiling, assume a fixed set of experts, or use inefficient trial-and-error strategies. We introduce Cost-Spectrum Contrastive Routing (CSCR), a  lightweight framework that maps both prompts and models into a shared embedding  space to enable fast, cost-sensitive selection. CSCR uses compact, fast-to-compute  logit footprints for open-source models and perplexity fingerprints for black-box APIs. A contrastive encoder is trained to favor the cheapest accurate expert within adaptive cost bands. At inference time, routing reduces to a single k-NN lookup via a FAISS index, requiring no retraining when the expert pool changes and enabling microsecond latency. Across multiple benchmarks, CSCR consistently outperforms baselines, improving the accuracy–cost tradeoff by up to 25%, while generalizing robustly to unseen LLMs and out-of-distribution prompts.
 [Code](https://github.com/rezashkv/cscr), [Paper](https://arxiv.org/pdf/2508.12491),
