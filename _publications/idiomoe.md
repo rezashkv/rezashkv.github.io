@@ -3,7 +3,7 @@ title: "Catalog-Native LLM: Speaking Item-ID dialect with Less Entanglement for 
 collection: publications
 permalink: /publications/idiomoe/
 excerpt: 'IDIOMoE decouples item-ID and language processing inside an LLM via token-type MoE, reducing interference and improving recommendation quality at roughly the same compute'
-date: 2025-01-25
+date: 2026-01-25
 venue: 'ICLR 2026'
 venueurl: 'https://openreview.net/forum?id=ia9vDh0Ltn'
 paperurl: 'https://arxiv.org/abs/2510.05125'
