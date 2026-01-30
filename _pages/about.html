@@ -57,7 +57,7 @@ redirect_from:
 <h2>Research Highlights</h2>
 <div id="research-highlights">
     {% for post in site.publications reversed %}
-    {% if post.highlight == "true" %}
+    {% if post.highlight %}
     <div class="publication">
         <div class="publication-image">
             <a href="{{ post.paperurl }}">
