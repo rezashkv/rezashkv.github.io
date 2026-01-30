@@ -8,7 +8,7 @@ venue: 'ICLR 2026'
 venueurl: 'https://openreview.net/forum?id=ia9vDh0Ltn'
 paperurl: 'https://arxiv.org/abs/2510.05125'
 githuburl: 'https://github.com//rezashkv'
-authors: 'Reza Shirkavand, Xiaokai Wei, Chen Wang, Zheng Hui, Heng Huang, and Michelle Gong'
+authors: 'Reza Shirkavand, Xiaokai Wei, Chen Wang, Zheng Hui, Heng Huang, Michelle Gong'
 figure: '/images/idiomoe.jpeg' 
 highlight: true
 ---
