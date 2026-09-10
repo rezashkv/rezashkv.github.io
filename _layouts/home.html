@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<section class="intro shell">
+  <div class="intro__grid">
+    <div>
+      <h1 class="intro__name">{{ site.author.name }}</h1>
+      {% if page.role %}<p class="intro__role">{{ page.role }}</p>{% endif %}
+
+      <div class="prose">
+        {{ content }}
+      </div>
+
+      {% include contacts.html %}
+    </div>
+
+    {% if site.author.avatar %}
+      {% assign avatar_base = site.author.avatar | split: '.' | first %}
+      {% assign avatar_thumb = '/images/thumbs/' | append: avatar_base | append: '.jpg' %}
+      {% assign has_avatar_thumb = site.static_files | where: 'path', avatar_thumb | first %}
+      <figure class="intro__portrait">
+        <img src="{% if has_avatar_thumb %}{{ avatar_thumb | prepend: base_path }}{% else %}{{ site.author.avatar | prepend: '/images/' | prepend: base_path }}{% endif %}"
+             alt="{{ site.author.name }}" width="400" height="500">
+      </figure>
+    {% endif %}
+  </div>
+</section>
+
+{% if site.data.news and site.data.news.size > 0 %}
+  {% assign news_shown = page.news_shown | default: 4 %}
+  <section class="section" id="news">
+    <div class="shell section__grid">
+      <h2 class="section__label label">News</h2>
+      <div>
+        <ul class="news" id="news-list">
+          {% for item in site.data.news %}
+            <li class="news__item{% if forloop.index > news_shown %} news__more{% endif %}"{% if forloop.index > news_shown %} hidden{% endif %}>
+              <span class="news__date">{{ item.date }}</span>
+              <span class="news__body">{{ item.html }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+
+        {% if site.data.news.size > news_shown %}
+          <button class="disclose" type="button"
+                  data-disclose="news-list"
+                  data-label-closed="Earlier news"
+                  data-label-open="Fewer"
+                  aria-controls="news-list"
+                  aria-expanded="false">Earlier news</button>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+<section class="section" id="research">
+  <div class="shell section__grid">
+    <h2 class="section__label label">Research</h2>
+    <div>
+      {% if page.research_intro %}
+        <p class="prose" style="margin-bottom:2.25rem">{{ page.research_intro }}</p>
+      {% endif %}
+
+      {% assign pubs = site.publications | sort: 'date' | reverse %}
+      {% assign years = pubs | group_by_exp: 'p', 'p.date | date: "%Y"' %}
+      <div class="pubs">
+        {% for year in years %}
+          <section class="year">
+            <h3 class="year__mark">{{ year.name }}</h3>
+            {% for post in year.items %}
+              {% include publication-item.html post=post %}
+            {% endfor %}
+          </section>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

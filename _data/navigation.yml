@@ -1,7 +1,13 @@
-# main links links
+# Primary navigation. `anchor` enables in-view highlighting on the home page.
 main:
-  - title: "Publications"
-    url: /publications/
-    
+  - title: "News"
+    url: /#news
+    anchor: news
+    optional: true
+
+  - title: "Research"
+    url: /#research
+    anchor: research
+
   - title: "CV"
     url: /cv/

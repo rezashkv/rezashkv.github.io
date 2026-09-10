@@ -1,23 +1,18 @@
 {% include base_path %}
 
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+<header class="masthead" id="masthead">
+  <div class="shell masthead__inner">
+    <a class="masthead__brand" href="{{ base_path }}/">{{ site.title }}</a>
+    <nav class="nav" aria-label="Primary">
+      {% for link in site.data.navigation.main %}
+        {% if link.url contains 'http' %}
+          <a class="nav__link{% if link.optional %} nav__link--optional{% endif %}"
+             href="{{ link.url }}"{% if link.anchor %} data-anchor="{{ link.anchor }}"{% endif %}>{{ link.title }}</a>
+        {% else %}
+          <a class="nav__link{% if link.optional %} nav__link--optional{% endif %}"
+             href="{{ base_path }}{{ link.url }}"{% if link.anchor %} data-anchor="{{ link.anchor }}"{% endif %}>{{ link.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
   </div>
-</div>
+</header>

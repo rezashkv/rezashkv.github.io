@@ -1,0 +1,83 @@
+{% include base_path %}
+{% assign pub = include.post %}
+
+{%- comment -%} Split a trailing distinction ("Spotlight", "Oral") off the venue. {%- endcomment -%}
+{% assign venue_name = pub.venue %}
+{% assign venue_flag = '' %}
+{% if pub.venue contains ' Spotlight' %}
+  {% assign venue_name = pub.venue | remove: ' Spotlight' %}
+  {% assign venue_flag = 'Spotlight' %}
+{% elsif pub.venue contains ' Oral' %}
+  {% assign venue_name = pub.venue | remove: ' Oral' %}
+  {% assign venue_flag = 'Oral' %}
+{% endif %}
+
+{%- comment -%} Name the code link for what it actually points at. {%- endcomment -%}
+{% assign repo_label = 'Code' %}
+{% if pub.githuburl contains 'huggingface' %}
+  {% assign repo_label = 'Data' %}
+{% elsif pub.githuburl contains 'github.io' %}
+  {% assign repo_label = 'Project' %}
+{% endif %}
+
+{% assign abstract = pub.content | strip_html | strip %}
+{% assign primary = pub.paperurl | default: pub.url | prepend: base_path %}
+
+{%- comment -%}
+  Prefer a generated thumbnail; fall back to the full figure when one has not
+  been generated yet (see the README for the sips command).
+{%- endcomment -%}
+{% assign fig_base = pub.figure | split: '/' | last | split: '.' | first %}
+{% assign thumb_path = '/images/thumbs/' | append: fig_base | append: '.jpg' %}
+{% assign has_thumb = site.static_files | where: 'path', thumb_path | first %}
+{% if has_thumb %}
+  {% assign thumb_src = thumb_path %}
+{% else %}
+  {% assign thumb_src = pub.figure %}
+{% endif %}
+
+<article class="pub">
+  {% if pub.figure %}
+    <a class="pub__figure" href="{{ primary }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ thumb_src | prepend: base_path }}" alt="" loading="lazy" decoding="async">
+    </a>
+  {% endif %}
+
+  <div class="pub__body">
+    <h3 class="pub__title">
+      <a href="{{ primary }}">{{ pub.title }}</a>
+    </h3>
+
+    {% if pub.authors %}
+      <p class="pub__authors">
+        {{ pub.authors | replace: 'Reza Shirkavand', '<strong>Reza Shirkavand</strong>' }}
+      </p>
+    {% endif %}
+
+    <div class="pub__meta">
+      {% if pub.venueurl %}
+        <a class="venue venue--linked" href="{{ pub.venueurl }}" rel="noopener">{{ venue_name }}{% if venue_flag != '' %} <span class="venue__flag">&#9656; {{ venue_flag }}</span>{% endif %}</a>
+      {% else %}
+        <span class="venue">{{ venue_name }}{% if venue_flag != '' %} <span class="venue__flag">&#9656; {{ venue_flag }}</span>{% endif %}</span>
+      {% endif %}
+      {% if pub.authors contains '*' %}
+        <span class="pub__note">* equal contribution</span>
+      {% endif %}
+    </div>
+
+    <div class="pub__links">
+      {% if pub.paperurl %}
+        <a class="chip" href="{{ pub.paperurl }}" rel="noopener">Paper</a>
+      {% endif %}
+      {% if pub.codeurl %}
+        <a class="chip" href="{{ pub.codeurl }}" rel="noopener">Code</a>
+      {% endif %}
+      {% if pub.githuburl %}
+        <a class="chip" href="{{ pub.githuburl }}" rel="noopener">{{ repo_label }}</a>
+      {% endif %}
+      {% if abstract != '' %}
+        <a class="chip" href="{{ base_path }}{{ pub.url }}">Abstract</a>
+      {% endif %}
+    </div>
+  </div>
+</article>

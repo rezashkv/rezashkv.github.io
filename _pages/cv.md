@@ -1,12 +1,14 @@
 ---
-layout: archive
-title: "CV"
+layout: page
+title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
+wide: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<p class="pub__links" style="margin-bottom:2.25rem">
+  <a class="chip" href="/files/CV.pdf">Download PDF</a>
+</p>
 
-<iframe src="/files/CV.pdf" style="width:100%; height:1000px;" frameborder="0"></iframe>
+<iframe class="doc-frame" src="/files/CV.pdf" title="Curriculum vitae of Reza Shirkavand"></iframe>

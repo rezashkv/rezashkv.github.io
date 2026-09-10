@@ -1,0 +1,24 @@
+# Newest first. `html` may contain inline links.
+- date: "Jun 2026"
+  html: '<a class="link" href="https://arxiv.org/abs/2607.04461">Flash-BoN</a> is accepted at <a class="link" href="https://eccv.ecva.net">ECCV 2026</a>.'
+
+- date: "Jan 2026"
+  html: '<a class="link" href="https://arxiv.org/abs/2510.05125">IDIOMoE</a> is accepted at <a class="link" href="https://iclr.cc">ICLR 2026</a>.'
+
+- date: "Dec 2025"
+  html: '<a class="link" href="https://arxiv.org/abs/2501.15316">ToMoE</a> is accepted at <a class="link" href="https://jmlr.org/tmlr/">TMLR</a>, to be presented at ICML 2026.'
+
+- date: "Sep 2025"
+  html: '<a class="link" href="https://arxiv.org/abs/2508.12491">CSCR</a> is accepted at <a class="link" href="https://neurips.cc">NeurIPS 2025</a> as a Spotlight.'
+
+- date: "Sep 2025"
+  html: '<a class="link" href="https://www.arxiv.org/abs/2502.03604">Bilevel-ZOFO</a> is accepted at <a class="link" href="https://neurips.cc">NeurIPS 2025</a>.'
+
+- date: "Jun 2025"
+  html: '<a class="link" href="https://arxiv.org/abs/2506.07371">ARGUS</a> is accepted at <a class="link" href="https://iccv.thecvf.com/">ICCV 2025</a>.'
+
+- date: "Feb 2025"
+  html: '<a class="link" href="https://arxiv.org/abs/2412.15341">FT-Unlearn</a> is accepted at <a class="link" href="https://cvpr.thecvf.com">CVPR 2025</a>.'
+
+- date: "Jan 2025"
+  html: '<a class="link" href="https://arxiv.org/abs/2406.12042">APTP</a> is accepted at <a class="link" href="https://iclr.cc/Conferences/2025">ICLR 2025</a>.'

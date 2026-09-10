@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% assign venue_name = page.venue %}
+{% assign venue_flag = '' %}
+{% if page.venue contains ' Spotlight' %}
+  {% assign venue_name = page.venue | remove: ' Spotlight' %}
+  {% assign venue_flag = 'Spotlight' %}
+{% elsif page.venue contains ' Oral' %}
+  {% assign venue_name = page.venue | remove: ' Oral' %}
+  {% assign venue_flag = 'Oral' %}
+{% endif %}
+
+{% assign repo_label = 'Code' %}
+{% if page.githuburl contains 'huggingface' %}
+  {% assign repo_label = 'Data' %}
+{% elsif page.githuburl contains 'github.io' %}
+  {% assign repo_label = 'Project' %}
+{% endif %}
+
+<article class="page shell">
+  <a class="page__back" href="{{ base_path }}/#research">All research</a>
+
+  <h1 class="page__title">{{ page.title }}</h1>
+
+  {% if page.authors %}
+    <p class="page__authors">
+      {{ page.authors | replace: 'Reza Shirkavand', '<strong>Reza Shirkavand</strong>' }}
+    </p>
+  {% endif %}
+
+  <div class="page__meta">
+    {% if page.venueurl %}
+      <a class="venue venue--linked" href="{{ page.venueurl }}" rel="noopener">{{ venue_name }}{% if venue_flag != '' %} <span class="venue__flag">&#9656; {{ venue_flag }}</span>{% endif %}</a>
+    {% elsif venue_name %}
+      <span class="venue">{{ venue_name }}</span>
+    {% endif %}
+
+    {% if page.date %}
+      <span class="pub__note">{{ page.date | date: '%B %Y' }}</span>
+    {% endif %}
+
+    {% if page.authors contains '*' %}
+      <span class="pub__note">* equal contribution</span>
+    {% endif %}
+  </div>
+
+  <div class="pub__links">
+    {% if page.paperurl %}<a class="chip" href="{{ page.paperurl }}" rel="noopener">Paper</a>{% endif %}
+    {% if page.codeurl %}<a class="chip" href="{{ page.codeurl }}" rel="noopener">Code</a>{% endif %}
+    {% if page.githuburl %}<a class="chip" href="{{ page.githuburl }}" rel="noopener">{{ repo_label }}</a>{% endif %}
+  </div>
+
+  {% if page.figure %}
+    <figure class="page__hero">
+      <img src="{{ page.figure | prepend: base_path }}" alt="Overview figure for {{ page.title }}">
+    </figure>
+  {% endif %}
+
+  {% assign body = content | strip_html | strip %}
+  {% if body != '' %}
+    <div class="prose">
+      <h2>Abstract</h2>
+      {{ content }}
+    </div>
+  {% endif %}
+</article>

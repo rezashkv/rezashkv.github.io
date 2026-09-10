@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<article class="page shell">
+  {% if page.title %}<h1 class="page__title">{{ page.title }}</h1>{% endif %}
+  {% if page.excerpt and page.show_excerpt %}<p class="page__authors">{{ page.excerpt }}</p>{% endif %}
+
+  <div class="prose{% if page.wide %} prose--wide{% endif %}">
+    {{ content }}
+  </div>
+</article>
