@@ -61,10 +61,6 @@ layout: default
   <div class="shell section__grid">
     <h2 class="section__label label">Research</h2>
     <div>
-      {% if page.research_intro %}
-        <p class="prose" style="margin-bottom:2.25rem">{{ page.research_intro }}</p>
-      {% endif %}
-
       {% assign pubs = site.publications | sort: 'date' | reverse %}
       {% assign years = pubs | group_by_exp: 'p', 'p.date | date: "%Y"' %}
       <div class="pubs">

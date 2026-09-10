@@ -3,7 +3,7 @@ title: "Efficient Fine-Tuning and Concept Suppression for Pruned Diffusion Model
 collection: publications
 permalink: /publications/ft-unlearn/
 excerpt: 'How to train a small diffusion model while suppressing unwanted concepts'
-date: 2025-06-11
+date: 2024-12-19
 venue: 'CVPR 2025'
 venueurl: 'https://cvpr.thecvf.com/Conferences/2025/AcceptedPapers'
 paperurl: 'https://arxiv.org/abs/2412.15341'

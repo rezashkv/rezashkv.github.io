@@ -3,7 +3,7 @@ title: "Not All Prompts Are Made Equal: Prompt-based Pruning of Text-to-Image Di
 collection: publications
 permalink: /publications/aptp/
 excerpt: 'Dynamic Prompt-based Pruning of Text-to-Image Diffusion Models'
-date: 2025-04-24
+date: 2024-06-17
 venue: 'ICLR 2025'
 venueurl: 'https://openreview.net/forum?id=3BhZCfJ73Y'
 paperurl: 'https://arxiv.org/abs/2406.12042'
