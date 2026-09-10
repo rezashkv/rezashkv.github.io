@@ -143,6 +143,13 @@ hr {
   text-decoration-color: var(--accent);
 }
 
+/* Buttons that happen to sit in prose keep their own styling, not link styling. */
+.prose .chip,
+.prose .contact {
+  text-decoration: none;
+  color: var(--muted);
+}
+
 /* ==========================================================================
    Shell
    ========================================================================== */
@@ -263,7 +270,10 @@ hr {
 .section__label {
   position: sticky;
   top: 6rem;
-  padding-top: 0.35rem;
+  padding-top: 0.2rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
 }
 
 @media (max-width: 52rem) {

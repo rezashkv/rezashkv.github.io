@@ -21,7 +21,15 @@
 {% endif %}
 
 {% assign abstract = pub.content | strip_html | strip %}
-{% assign primary = pub.paperurl | default: pub.url | prepend: base_path %}
+{%- comment -%}
+  paperurl is already absolute, so only the local permalink takes base_path --
+  chaining prepend onto default would prefix the site URL to the arXiv URL.
+{%- endcomment -%}
+{% if pub.paperurl %}
+  {% assign primary = pub.paperurl %}
+{% else %}
+  {% assign primary = pub.url | prepend: base_path %}
+{% endif %}
 
 {%- comment -%}
   Prefer a generated thumbnail; fall back to the full figure when one has not
