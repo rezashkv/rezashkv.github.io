@@ -3,7 +3,9 @@
 <header class="masthead" id="masthead">
   <div class="shell masthead__inner">
     <a class="masthead__brand" href="{{ base_path }}/">{{ site.title }}</a>
-    <nav class="nav" aria-label="Primary">
+
+    <div class="masthead__right">
+      <nav class="nav" aria-label="Primary">
       {% for link in site.data.navigation.main %}
         {% if link.url contains 'http' %}
           <a class="nav__link{% if link.optional %} nav__link--optional{% endif %}"
@@ -13,6 +15,11 @@
              href="{{ base_path }}{{ link.url }}"{% if link.anchor %} data-anchor="{{ link.anchor }}"{% endif %}>{{ link.title }}</a>
         {% endif %}
       {% endfor %}
-    </nav>
+      </nav>
+
+      <div class="masthead__contacts">
+        {% include contacts.html compact=true %}
+      </div>
+    </div>
   </div>
 </header>
