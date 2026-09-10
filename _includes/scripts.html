@@ -4,11 +4,6 @@
 
   var masthead = document.getElementById("masthead");
 
-  /* The intro's profile-link row; once it scrolls under the masthead, the
-     masthead reveals its own compact copy. */
-  var introContacts = document.querySelector(".intro .contacts");
-  var condenseAt = Infinity;
-
   /* Nav links pointing at a section on this page, paired with their section. */
   var sections = [].slice
     .call(document.querySelectorAll(".nav__link[data-anchor]"))
@@ -21,34 +16,23 @@
   var active;
 
   /* Section offsets are measured once per layout, so scrolling only compares numbers. */
-  function offsetTop(el) {
-    var y = 0;
-    while (el) {
-      y += el.offsetTop;
-      el = el.offsetParent;
-    }
-    return y;
-  }
-
   function measure() {
-    if (introContacts && masthead) {
-      condenseAt = offsetTop(introContacts) + introContacts.offsetHeight - masthead.offsetHeight;
-    }
-
     sections.forEach(function (item) {
-      item.top = offsetTop(item.el);
+      var y = 0,
+        el = item.el;
+      while (el) {
+        y += el.offsetTop;
+        el = el.offsetParent;
+      }
+      item.top = y;
     });
   }
 
   function update() {
     var y = window.pageYOffset;
 
-    if (masthead) {
-      /* Hairline under the masthead once the page has moved. */
-      masthead.classList.toggle("is-stuck", y > 8);
-      /* Profile links join the masthead once the intro's row is out of view. */
-      masthead.classList.toggle("is-condensed", y > condenseAt);
-    }
+    /* Hairline under the masthead once the page has moved. */
+    if (masthead) masthead.classList.toggle("is-stuck", y > 8);
 
     if (!sections.length) return;
 

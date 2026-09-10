@@ -200,34 +200,10 @@ hr {
 
 .masthead__brand:hover { color: var(--accent); }
 
-.masthead__right {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.85rem, 2.5vw, 1.75rem);
-}
-
 .nav {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 2.5vw, 1.75rem);
-}
-
-/*
-   The profile links ride along in the masthead once the intro's chip row has
-   scrolled away. Hidden with visibility (not display) so the space is reserved
-   and revealing them shifts nothing.
-*/
-.masthead__contacts {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(-3px);
-  transition: opacity 0.22s var(--ease), transform 0.22s var(--ease), visibility 0.22s;
-}
-
-.masthead.is-condensed .masthead__contacts {
-  visibility: visible;
-  opacity: 1;
-  transform: none;
 }
 
 .nav__link {
@@ -264,15 +240,6 @@ hr {
   .nav { gap: 0.9rem; }
   .nav__link { font-size: 0.75rem; }
   .nav__link--optional { display: none; }
-
-  /*
-     Not enough room for both. Below the intro the profile links matter more
-     than the section anchors, so they trade places.
-  */
-  .masthead__contacts { display: none; }
-  .masthead.is-condensed .masthead__contacts { display: block; }
-  .masthead.is-condensed .nav { display: none; }
-  .contacts--compact .contact { padding: 0.4rem 0.3rem; }
 }
 
 /* ==========================================================================
@@ -409,23 +376,6 @@ hr {
   height: 0.875rem;
   flex: none;
   fill: currentColor;
-}
-
-/* Icon-only row for the masthead: borderless until hovered. */
-.contacts--compact {
-  margin-top: 0;
-  gap: 0.15rem;
-}
-
-.contacts--compact .contact {
-  padding: 0.4rem;
-  border-color: transparent;
-  color: var(--muted);
-}
-
-.contacts--compact .contact:hover {
-  color: var(--accent);
-  border-color: var(--rule);
 }
 
 /* ==========================================================================
