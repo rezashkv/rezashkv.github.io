@@ -9,5 +9,9 @@ main:
     url: /#research
     anchor: research
 
+  - title: "Teaching"
+    url: /#teaching
+    anchor: teaching
+
   - title: "CV"
     url: /cv/

@@ -1,0 +1,11 @@
+# Teaching appointments, most recent first.
+# `terms` is a list so a recurring course stays one entry.
+- course: "Advanced Machine Learning Topics"
+  role: "Co-Instructor"
+  institution: "University of Maryland"
+  terms:
+    - "Fall 2026"
+    - "Spring 2026"
+    - "Spring 2025"
+    - "Spring 2024"
+  note: "Lectures on transformers and diffusion models."

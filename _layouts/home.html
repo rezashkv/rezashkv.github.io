@@ -76,3 +76,23 @@ layout: default
     </div>
   </div>
 </section>
+
+{% if site.data.teaching and site.data.teaching.size > 0 %}
+  <section class="section" id="teaching">
+    <div class="shell section__grid">
+      <h2 class="section__label label">Teaching</h2>
+      <div>
+        {% for item in site.data.teaching %}
+          <article class="teaching__item">
+            <h3 class="teaching__title">{{ item.course }}</h3>
+            <p class="teaching__role">{{ item.role }}{% if item.institution %} &middot; {{ item.institution }}{% endif %}</p>
+            {% if item.terms %}
+              <p class="teaching__terms">{{ item.terms | join: ' &middot; ' }}</p>
+            {% endif %}
+            {% if item.note %}<p class="teaching__note">{{ item.note }}</p>{% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}

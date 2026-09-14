@@ -600,6 +600,48 @@ hr {
 }
 
 /* ==========================================================================
+   Teaching
+   ========================================================================== */
+
+.teaching__item {
+  padding-block: 1.6rem;
+  border-top: 1px solid var(--rule);
+}
+
+.teaching__item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.teaching__title {
+  font-size: 1.0625rem;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.teaching__role {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-bottom: 0.55rem;
+}
+
+.teaching__terms {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.7rem;
+}
+
+.teaching__note {
+  font-size: 0.9375rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
    Standalone pages
    ========================================================================== */
 
